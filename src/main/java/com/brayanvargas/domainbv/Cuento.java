@@ -14,5 +14,8 @@ public class Cuento extends Recurso implements Prestable {
 
    }
 
-
+   @Override
+   public String toString() {
+      return "Cuento";
+   }
 }

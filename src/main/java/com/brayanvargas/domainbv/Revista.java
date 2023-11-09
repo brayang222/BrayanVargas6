@@ -11,4 +11,9 @@ public class Revista extends Recurso implements Prestable{
    public void devolver() {
 
    }
+
+   @Override
+   public String toString() {
+      return "Revista";
+   }
 }

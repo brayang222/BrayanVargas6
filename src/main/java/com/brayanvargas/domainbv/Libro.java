@@ -10,4 +10,9 @@ public class Libro extends Recurso implements Prestable {
    public void devolver() {
 
    }
+
+   @Override
+   public String toString() {
+      return "Libro";
+   }
 }

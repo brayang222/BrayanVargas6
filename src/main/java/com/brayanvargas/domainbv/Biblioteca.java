@@ -13,6 +13,7 @@ public class Biblioteca {
 
    public void addRecursoVargas(Recurso recurso){
       System.out.println("Se añadió el recurso " + recurso);
+      recursosBrayan.add(recurso);
    }
 
    public void prestarRecursoVargas(Prestable prestable){
