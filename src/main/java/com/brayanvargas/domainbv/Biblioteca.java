@@ -17,10 +17,16 @@ public class Biblioteca {
    }
 
    public boolean prestarRecursoVargas(Prestable prestable){
-      return true;
+      if (prestable instanceof Recurso){
+         return true;
+      }
+      return false;
    }
 
    public boolean devolverRecursoVargas(Prestable prestable){
+      if (prestable instanceof Recurso){
+         return false;
+      }
       return false;
    }
 
