@@ -4,6 +4,9 @@ public abstract class Recurso {
    private boolean prestadoBrayan;
    private String nombreBrayan;
 
+   public Recurso(boolean prestadoBrayan, String nombreBrayan) {
+   }
+
    public boolean isPrestadoBrayan() {
       return prestadoBrayan;
    }

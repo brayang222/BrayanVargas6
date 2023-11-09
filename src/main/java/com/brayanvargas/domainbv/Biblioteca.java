@@ -18,6 +18,7 @@ public class Biblioteca {
 
    public boolean prestarRecursoVargas(Prestable prestable){
       if (prestable instanceof Recurso){
+         prestable.prestar();
          return true;
       }
       return false;
@@ -25,13 +26,14 @@ public class Biblioteca {
 
    public boolean devolverRecursoVargas(Prestable prestable){
       if (prestable instanceof Recurso){
+         prestable.devolver();
          return false;
       }
       return false;
    }
 
    public void listaPrestadosVargas(){
-      System.out.println("La lisa de prestados es " + recursosBrayan);
+      System.out.println("La lisa de prestados es " );
    }
 
    public List<Recurso> getRecursosBrayan() {
