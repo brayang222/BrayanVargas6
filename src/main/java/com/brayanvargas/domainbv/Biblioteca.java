@@ -16,12 +16,12 @@ public class Biblioteca {
       recursosBrayan.add(recurso);
    }
 
-   public void prestarRecursoVargas(Prestable prestable){
-      System.out.println("Se presto el recurso" + prestable);
+   public boolean prestarRecursoVargas(Prestable prestable){
+      return true;
    }
 
-   public void devolverRecursoVargas(Prestable prestable){
-      System.out.println("Se devolvio el recurso" + prestable);
+   public boolean devolverRecursoVargas(Prestable prestable){
+      return false;
    }
 
    public void listaPrestadosVargas(){
