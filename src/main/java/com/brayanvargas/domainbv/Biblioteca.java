@@ -17,10 +17,28 @@ public class Biblioteca {
    }
 
    public boolean prestarRecursoVargas(Prestable prestable){
-      if (prestable instanceof Recurso){
-         prestable.prestar();
+      if (prestable instanceof Libro) {
+         Libro libro = (Libro) prestable;
+         System.out.println("se presto el libro");
+         libro.prestar();
          return true;
+      } else if (prestable instanceof Cuento) {
+         Cuento cuento = (Cuento) prestable;
+         cuento.prestar();
+         return true;
+      } else if (prestable instanceof Revista) {
+         Revista revista = (Revista) prestable;
+         revista.prestar();
+         return true;
+      } else if (prestable instanceof Diccionario) {
+         System.out.println("No se puede prestar un diccionario.");
+         return false;
+      } else if (prestable instanceof Tesis) {
+         System.out.println("No se puede prestar una tesis.");
+         return false;
       }
+
+      System.out.println("El objeto no es una instancia de ninguna subclase de Recurso");
       return false;
    }
 
@@ -33,13 +51,19 @@ public class Biblioteca {
    }
 
    public void listaPrestadosVargas(){
-      System.out.println("La lisa de prestados es ");
-      for (Recurso recursoAndres : recursosBrayan) {
-         if (recursoAndres.isPrestadoBrayan()) {
-            System.out.println(recursoAndres);
+      boolean algunRecursoPrestado = false;
+
+      for (Recurso recurso : recursosBrayan) {
+         if (recurso.isPrestadoBrayan()) {
+            System.out.println("La lista de prestados es:");
+            System.out.println("- " + recurso);
+            algunRecursoPrestado = true;
          }
       }
-      System.out.println("La lisa de prestados es " );
+
+      if (!algunRecursoPrestado) {
+         System.out.println("No hay ningún recurso prestado.");
+      }
    }
 
    public List<Recurso> getRecursosBrayan() {

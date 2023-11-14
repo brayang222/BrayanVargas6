@@ -5,6 +5,8 @@ public abstract class Recurso {
    private String nombreBrayan;
 
    public Recurso(boolean prestadoBrayan, String nombreBrayan) {
+      this.prestadoBrayan = prestadoBrayan;
+      this.nombreBrayan = nombreBrayan;
    }
 
    public boolean isPrestadoBrayan() {
