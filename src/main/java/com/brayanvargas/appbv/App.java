@@ -8,11 +8,11 @@ public class App {
    public static void main(String[] args) {
       Biblioteca biblioteca = new Biblioteca();
 
-      Cuento cuento = new Cuento();
-      Libro libro = new Libro();
-      Revista revista = new Revista();
-      Tesis tesis = new Tesis();
-      Diccionario diccionario = new Diccionario();
+      Cuento cuento = new Cuento(false, "El principito");
+      Libro libro = new Libro(false, "Teoría del todo");
+      Revista revista = new Revista(false, "Avon");
+      Tesis tesis = new Tesis(false, "Tesis astronómica");
+      Diccionario diccionario = new Diccionario(false, "Wikipedia");
 
       biblioteca.addRecursoVargas(cuento);
       biblioteca.addRecursoVargas(libro);

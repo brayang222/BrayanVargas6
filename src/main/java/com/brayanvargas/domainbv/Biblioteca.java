@@ -39,6 +39,7 @@ public class Biblioteca {
             System.out.println(recursoAndres);
          }
       }
+      System.out.println("La lisa de prestados es " );
    }
 
    public List<Recurso> getRecursosBrayan() {
