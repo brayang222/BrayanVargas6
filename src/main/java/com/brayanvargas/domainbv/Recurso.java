@@ -15,4 +15,12 @@ public abstract class Recurso {
    public void setPrestadoBrayan(boolean prestadoBrayan) {
       this.prestadoBrayan = prestadoBrayan;
    }
+
+   @Override
+   public String toString() {
+      return "Recurso{" +
+            "prestadoBrayan=" + prestadoBrayan +
+            ", nombreBrayan='" + nombreBrayan + '\'' +
+            '}';
+   }
 }

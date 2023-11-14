@@ -5,6 +5,7 @@ public class Revista extends Recurso implements Prestable{
    @Override
    public void prestar() {
       if (isPrestadoBrayan()){
+         this.setPrestadoBrayan(true);
          System.out.println("se presto la revista");
       }
    }
@@ -12,6 +13,7 @@ public class Revista extends Recurso implements Prestable{
    @Override
    public void devolver() {
       if (!isPrestadoBrayan()){
+         this.setPrestadoBrayan(false);
          System.out.println("se devolvio la revista");
       }
    }

@@ -4,6 +4,7 @@ public class Libro extends Recurso implements Prestable {
    @Override
    public void prestar() {
       if (isPrestadoBrayan()){
+         this.setPrestadoBrayan(true);
          System.out.println("se presto el libro");
       }
    }
@@ -11,6 +12,7 @@ public class Libro extends Recurso implements Prestable {
    @Override
    public void devolver() {
       if (!isPrestadoBrayan()){
+         this.setPrestadoBrayan(false);
          System.out.println("se devolvio el libro");
       }
    }
