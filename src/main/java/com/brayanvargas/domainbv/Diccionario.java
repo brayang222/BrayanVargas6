@@ -6,6 +6,8 @@ public class Diccionario extends Recurso{
       super(prestadoBrayan, nombreBrayan);
    }
 
+
+
    @Override
    public String toString() {
       return "Diccionario";

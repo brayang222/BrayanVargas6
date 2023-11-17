@@ -17,19 +17,32 @@ public class Biblioteca {
    }
 
    public boolean prestarRecursoVargas(Prestable prestable){
-      if (prestable instanceof Libro) {
+       if (prestable instanceof Libro) {
          Libro libro = (Libro) prestable;
-         System.out.println("se presto el libro");
-         libro.prestar();
-         return true;
+          if (libro.isPrestadoBrayan()){
+             System.out.println("El libro ya está prestado");
+          } else {
+             libro.prestar();
+             return true;
+          }
       } else if (prestable instanceof Cuento) {
          Cuento cuento = (Cuento) prestable;
-         cuento.prestar();
-         return true;
+         if (cuento.isPrestadoBrayan()){
+            System.out.println("El cuento ya está prestado");
+         } else {
+            cuento.prestar();
+            return true;
+         }
+
       } else if (prestable instanceof Revista) {
          Revista revista = (Revista) prestable;
-         revista.prestar();
-         return true;
+         if (revista.isPrestadoBrayan()){
+            System.out.println("La revista ya está prestado");
+         } else {
+            revista.prestar();
+            return true;
+         }
+
       } else if (prestable instanceof Diccionario) {
          System.out.println("No se puede prestar un diccionario.");
          return false;
@@ -38,7 +51,6 @@ public class Biblioteca {
          return false;
       }
 
-      System.out.println("El objeto no es una instancia de ninguna subclase de Recurso");
       return false;
    }
 

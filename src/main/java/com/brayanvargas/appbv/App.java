@@ -21,6 +21,7 @@ public class App {
       biblioteca.addRecursoVargas(diccionario);
 
       biblioteca.prestarRecursoVargas(libro);
+      biblioteca.prestarRecursoVargas(libro);
 
       biblioteca.listaPrestadosVargas();
 
